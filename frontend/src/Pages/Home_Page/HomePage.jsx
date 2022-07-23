@@ -28,7 +28,7 @@ const HomePage = () => {
           <div>Loading...</div>
         ) : (
           nfts.map((nft) => (
-            <div key={nft.id} className="col-12 col-md-6 col-lg-4">
+            <div key={nft.id} className="col-12 col-md-6 col-lg-3">
               <NFTCard nft={nft} />
             </div>
           ))

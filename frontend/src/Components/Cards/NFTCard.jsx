@@ -14,12 +14,10 @@ const NFTCard = ({ nft }) => {
         </p>
         <div className="tokenInfo">
           <div className="price">
-            <ins>◘</ins>
             {/* <p>0.031 ETH</p> */}
             <p>{Math.floor(Math.random() * (1000 - 100) + 100) / 1000} ETH</p>
           </div>
           <div className="duration">
-            <ins>◷</ins>
             <p>id: {token_id}</p>
           </div>
         </div>

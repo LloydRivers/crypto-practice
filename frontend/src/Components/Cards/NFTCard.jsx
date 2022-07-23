@@ -23,6 +23,7 @@ const NFTCard = ({ nft }) => {
             <p>id: {token_id}</p>
           </div>
         </div>
+        <button className="card-btn">buy</button>
         <hr />
       </div>
     </div>

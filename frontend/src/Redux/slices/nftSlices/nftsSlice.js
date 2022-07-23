@@ -13,7 +13,6 @@ export const nftsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchNfts.pending, (state, action) => {
-      console.log("fetchNfts.pending");
       state.loading = true;
     });
     builder.addCase(fetchNfts.fulfilled, (state, action) => {

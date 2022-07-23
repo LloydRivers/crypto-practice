@@ -1,25 +1,7 @@
-import { useEffect } from "react";
-
-import { NFTCard } from "./Components";
-
-import { selectNfts, fetchNfts } from "./Redux/slices/nftSlices/nftsSlice";
-
-import { useSelector, useDispatch } from "react-redux";
+import AllRoutes from "./Routing/AllRoutes";
 
 function App() {
-  const nfts = useSelector(selectNfts);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchNfts());
-    console.log(nfts);
-  }, []);
-
-  return (
-    <div className="App">
-      <NFTCard />
-    </div>
-  );
+  return <AllRoutes />;
 }
 
 export default App;

@@ -1,12 +1,20 @@
-import { NFTCard } from "./Components";
 import { useEffect } from "react";
 
-import { getData } from "utils/API/FetchNFTS/getData.js";
+import { NFTCard } from "./Components";
+
+import { selectNfts, fetchNfts } from "./Redux/slices/nftSlices/nftsSlice";
+
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  const nfts = useSelector(selectNfts);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    getData();
+    dispatch(fetchNfts());
+    console.log(nfts);
   }, []);
+
   return (
     <div className="App">
       <NFTCard />

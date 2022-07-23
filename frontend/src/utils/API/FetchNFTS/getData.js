@@ -1,6 +1,7 @@
 import axios from "axios";
 
 export const getData = async () => {
+  console.log("getData");
   const { REACT_APP_API_KEY, REACT_APP_API_HOST, REACT_APP_API_ENPOINT } =
     process.env;
 
@@ -19,10 +20,6 @@ export const getData = async () => {
     },
   };
 
-  try {
-    const response = await axios(options);
-    return response.data.assets;
-  } catch (error) {
-    console.log(error);
-  }
+  const { data } = await axios(options);
+  return data.assets;
 };
